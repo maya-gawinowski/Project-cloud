@@ -31,7 +31,7 @@ Let’s apply the previous schema by creating a new VPC.
 <br><br>
 Then we will create a new public subnet
 <br><br>
-![image](img-deployment/Capture d’écran 2023-07-17 à 22.27.59.png.png)
+![image](img-deployment/test.png)
 <br><br>
 We then created a new Internet Gateway
 <br><br>
