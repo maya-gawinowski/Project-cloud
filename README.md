@@ -40,7 +40,6 @@ IAM:
 5: Answer 1
 6: Answer 3
 7: Answer 1
-![image](https://github.com/maya-gawinowski/Project-cloud/assets/78488271/769ed332-37cc-46a3-8bc2-fc3a03b53072)
 
 
 <div id='quizz'/>
