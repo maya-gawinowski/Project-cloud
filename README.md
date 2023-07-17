@@ -26,20 +26,20 @@ The first step was to define our infrastructure. We chose to work on the followi
 
 Network:
 
-1: Answer 3
-2: Answer 3
-3: Answers 1, 3 and 6
+1: Answer 3 <br>
+2: Answer 3 <br>
+3: Answers 1, 3 and 6<br>
 4: Answer 4 
 
 IAM: 
 
-1: Answer 3 
-2: Answer 1
-3: Answers 3 and 4
-4: Answer 1
-5: Answer 1
-6: Answer 3
-7: Answer 1
+1: Answer 3 <br>
+2: Answer 1<br>
+3: Answers 3 and 4<br>
+4: Answer 1<br>
+5: Answer 1<br>
+6: Answer 3<br>
+7: Answer 1<br>
 
 
 <div id='quizz'/>
