@@ -26,9 +26,11 @@ To keep our data safe, we can use Amazon RDS with MariaDB, with the Systems Mana
 Please note that we created our own network stack while doing this project. 
 <br><br>
 Let’s apply the previous schema by creating a new VPC.
+<br><br>
 ![image](img-deployment/deployment1.png)
 <br><br>
 Then we will create a new public subnet
+<br><br>
 ![image](img-deployment/deployment2.png)
 
 
