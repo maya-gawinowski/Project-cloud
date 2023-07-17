@@ -125,7 +125,7 @@ S3 instances
 
 Question2: under what condition does this policy allows access to VPC-related information? Which AWS region?
 <br><br>
-![image](img-policies/policy2.png)
+![image](img-policies/test.png)
 <br><br>
 •	“aws:RequestRegion”: “us-west-2” : allows access to VPC-related information only if the requested AWS region is set to “us-west-2”.
 
