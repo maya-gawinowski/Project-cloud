@@ -32,7 +32,56 @@ Let’s apply the previous schema by creating a new VPC.
 Then we will create a new public subnet
 <br><br>
 ![image](img-deployment/deployment2.png)
-
+<br><br>
+We then created a new Internet Gateway
+<br><br>
+![image](img-deployment/deployment3.png)
+<br><br>
+Next, we added a route to our VPC route table. This route is to connect our VPC to our internet gateway.
+<br><br>
+![image](img-deployment/deployment4.png)
+<br><br>
+The next step is to create a new EC2 instance based on the following AMI: Cloud9AmazonLinux2-2023-06-22T17-21. This instance is linked to our public subnet.
+<br><br>
+![image](img-deployment/deployment5.png)
+<br><br>
+We can see that our website is running (after we added a new inbound rule for http and did all the installations required). We connected a terminal using SSH connection. 
+<br><br>
+![image](img-deployment/deployment6.png)
+<br><br>
+![image](img-deployment/deployment7.png)
+<br><br>
+![image](img-deployment/deployment8.png)
+<br><br>
+Now that we have our first subnet ready to run our instance, we had to create another one for our database. We specifically chose to create the two subnets in two different regions (to create the RDS database properly)
+<br><br>
+![image](img-deployment/deployment9.png)
+<br><br>
+We then created a MariaDB database container on RDS. We created a new security group.
+<br><br>
+![image](img-deployment/deployment10.png)
+<br><br>
+![image](img-deployment/deployment11.png)
+<br><br>
+The next step was to connect to this database. To do so, we checked the databases, we saw that we had to create a new one. So, we created capstonedb.
+<br><br>
+![image](img-deployment/deployment12.png)
+<br><br>
+![image](img-deployment/deployment13.png)
+<br><br>
+We then proceed to use this DB and to run the script.
+<br><br>
+![image](img-deployment/deployment14.png)
+<br><br>
+Once it was done, we knew that we needed to allow the app to access the connection information. We did that part using the AWS Systems Manager. We created the 4 important endpoints for the app.
+<br><br>
+![image](img-deployment/deployment15.png)
+<br><br>
+And it worked! We can see that the queries are working on our application.
+<br><br>
+![image](img-deployment/deployment16.png)
+<br><br>
+![image](img-deployment/deployment17.png)
 
 <div id='quizz'/>
   
