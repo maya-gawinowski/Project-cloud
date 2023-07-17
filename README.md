@@ -24,9 +24,10 @@ Our PHP application will be in the EC2 Instance in the public subnet. With the V
 To keep our data safe, we can use Amazon RDS with MariaDB, with the Systems Manager Parameter Store, all the connection information will be stored and accessible by the application.
 
 Please note that we created our own network stack while doing this project. 
-<br>
+<br><br>
 Let’s apply the previous schema by creating a new VPC.
 ![image](img-deployment/deployment1.png)
+<br><br>
 Then we will create a new public subnet
 ![image](img-deployment/deployment2.png)
 
