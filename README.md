@@ -19,6 +19,17 @@ The purpose of this project is to deploy an application on AWS to make sure that
 The first step was to define our infrastructure. We chose to work on the following one: 
 ![image](img-deployment/architecture.png)
 
+Our PHP application will be in the EC2 Instance in the public subnet. With the VPC and its internet gateway. The users, here represented by the PC, will be able to access our application.
+
+To keep our data safe, we can use Amazon RDS with MariaDB, with the Systems Manager Parameter Store, all the connection information will be stored and accessible by the application.
+
+Please note that we created our own network stack while doing this project. 
+<br>
+Let’s apply the previous schema by creating a new VPC.
+![image](img-deployment/deployment1.png)
+Then we will create a new public subnet
+![image](img-deployment/deployment2.png)
+
 
 <div id='quizz'/>
   
