@@ -11,13 +11,17 @@ Table of Contents
 
 ---
 <div id='deployment'/>
+  
 ## App deployment
 
 <div id='quizz'/>
+  
 ## Quizz
 
 <div id='quizz'/>
+  
 ## IAM policies
 
 <div id='dashboard'/>
+  
 ## Quicksight dashboard
