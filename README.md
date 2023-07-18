@@ -217,17 +217,20 @@ As we noticed that in most of the charts given in the subjects, it is centered a
 
 ### YoY Revenue (2017 vs 2018)
 <br>
-For this one, we did a little bit more calculation. First we modified the actual dataset by adding two new calculation fields: one giving us the revenue for each of the three categories (critical care, medical, surgical) for the year 2017. And another one doing the same thing but for the year 2018. Also prior to creating these two new fields, we extracted the admition year into a new field as well so we would not have to care about the rest of the date information.
-Then, we added a KPI visual and as the value of it we created a new calculation field calculating the increase in revenue between the years 2017 and 2018. 
+For this one, we did a little bit more calculation. First we modified the actual dataset by adding two new calculation fields: one giving us the revenue for each of the three categories (critical care, medical, surgical) for the year 2017 (filtered-revenue-2017). And another one doing the same thing but for the year 2018 (filtered-revenue2018). Also prior to creating these two new fields, we extracted the admition year into a new field as well so we would not have to care about the rest of the date information.
+Then, we added a KPI visual and as the value of it we created a new calculation field calculating the increase in revenue between the years 2017 and 2018 (YoYRevenue). 
 <br><br>
 
 ![image](img-Quicksight/QS4.png)
+![image](img-Quicksight/QS41.png)
+![image](img-Quicksight/QS42.png)
+![image](img-Quicksight/QS43.png)
 <br><br>
 
 ### YoY Profit (2017 vs 2018)
 <br>
-For this one, we did a little bit more calculation. First we modified the actual dataset by adding two new calculation fields: one giving us the profit for each of the three categories (critical care, medical, surgical) for the year 2017. And another one doing the same thing but for the year 2018. Also prior to creating these two new fields, we extracted the admition year into a new field as well so we would not have to care about the rest of the date information.
-Then, we added a KPI visual and as the value of it we created a new calculation field calculating the increase in profit between the years 2017 and 2018. 
+For this one, we did a little bit more calculation. First we modified the actual dataset by adding two new calculation fields: one giving us the profit for each of the three categories (critical care, medical, surgical) for the year 2017 (filtered-profit-2017). And another one doing the same thing but for the year 2018 (filtered-profit-2018). Also prior to creating these two new fields, we extracted the admition year into a new field as well so we would not have to care about the rest of the date information.
+Then, we added a KPI visual and as the value of it we created a new calculation field calculating the increase in profit between the years 2017 and 2018 (YoYProfit). 
 <br><br>
 
 ![image](img-Quicksight/QS5.png)
