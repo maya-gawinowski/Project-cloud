@@ -234,6 +234,15 @@ Then, we added a KPI visual and as the value of it we created a new calculation 
 <br><br>
 
 ![image](img-Quicksight/QS5.png)
+
+---
+![image](img-Quicksight/QS51.png)
+
+---
+![image](img-Quicksight/QS52.png)
+
+---
+![image](img-Quicksight/QS53.png)
 <br><br>
 
 ### Sum of cost by category and admition year 
