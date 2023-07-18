@@ -165,7 +165,8 @@ Resource ARNs:<br>
 <br><br>
 * This policy grant access to all actions that start with Get “iam:Get*” and all actions that start with List “iam:List*”.<br>
 * It does not allow to create anything. For that we would need to add “iam:Create*” to the actions allowed.<br>
-“iam:Get*” allows<br>
+
+“iam:Get*” allows:<br>
 * “Iam:GetGroup”: allows to retrieve a list of IAM users that are in the specified IAM group.<br>
 * “iam:GetRole”: allows to retrieve information about the specified role (role’s path, GUID, ARN, role’s trust policy).<br>
 *“iam:GetUser”: allows to retrieve information about the specified IAM user (user’s creation date, path, unique ID and ARN). <br>
