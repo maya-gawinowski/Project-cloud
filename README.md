@@ -107,7 +107,7 @@ IAM:
 7: Answer 1<br>
 
 
-<div id='quizz'/>
+<div id='iam'/>
   
 ## IAM policies
 
