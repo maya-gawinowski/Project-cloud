@@ -197,54 +197,62 @@ First, here is an overview of our final dashboard:
 <br><br>
 We are now going to go through each of these KPIs
 <br><br>
+
 ### Sum of revenue by admition date
-<br><br>
+<br>
 For this one, we chose a line chart visual with the revenue(sum) for the value field and the admition date(year) for the x-axis(month). As the dataset does not go past 2018, we did a forecast telling us the tendency over the year 2019.
 <br><br>
 ![image](img-Quicksight/QS2.png)
 <br><br>
+
 ### Sum of profit by hospital
-<br><br>
+<br>
 Here, we chose a donut chart visual with hospital for the group/color field and profit(sum) for the value field.
 As we noticed that in most of the charts given in the subjects, it is centered around the three categories Critical care, medical and surgical. We chose to add a filter here to only have the profit for these three categories.
 <br><br>
 ![image](img-Quicksight/QS3.png)
 <br><br>
+
 ### YoY Revenue (2017 vs 2018)
-<br><br>
+<br>
 For this one, we did a little bit more calculation. First we modified the actual dataset by adding two new calculation fields: one giving us the revenue for each of the three categories (critical care, medical, surgical) for the year 2017. And another one doing the same thing but for the year 2018. Also prior to creating these two new fields, we extracted the admition year into a new field as well so we would not have to care about the rest of the date information.
 Then, we added a KPI visual and as the value of it we created a new calculation field calculating the increase in revenue between the years 2017 and 2018. 
 <br><br>
 ![image](img-Quicksight/QS4.png)
 <br><br>
+
 ### YoY Profit (2017 vs 2018)
-<br><br>
+<br>
 For this one, we did a little bit more calculation. First we modified the actual dataset by adding two new calculation fields: one giving us the profit for each of the three categories (critical care, medical, surgical) for the year 2017. And another one doing the same thing but for the year 2018. Also prior to creating these two new fields, we extracted the admition year into a new field as well so we would not have to care about the rest of the date information.
 Then, we added a KPI visual and as the value of it we created a new calculation field calculating the increase in profit between the years 2017 and 2018. 
 <br><br>
 ![image](img-Quicksight/QS5.png)
 <br><br>
-### Sum of cost by category and admition year
-<br><br>
+
+### Sum of cost by category and admition year 
+<br>
 Here, we created an horizontal bar chart visual with the category on the y-axis field, the cost(sum) in the value field and the admition date(year) in the group/color field. To then make sure we only have the three categories as shown in the subject, we added a filter restricting the amount of categories we wish to display. We also added a filter to only showcase the data for the years 2017 and 2018.
 <br><br>
 ![image](img-Quicksight/QS6.png)
 <br><br>
+
 ### Sum of discount and sum profit by admition date and category  
-<br><br>
+<br>
 For this one, we chose a table visual with discount(sum) and profit(sum) in the value field and the admition date(year) and category in the group by field. We then added two filters: one for filtering the years (only 2017 and 2018) and one for filtering the categories (only critical care, surgical and medical).
 We also added a conditional formating on the discount(sum) value so that when it get greater than 20, we display an orange cross next to the value.
 <br><br>
 ![image](img-Quicksight/QS7.png)
 <br><br>
-Top 3 categories for total profit
-<br><br>
+
+### Top 3 categories for total profit
+<br>
 Here, we added a new insight in top ranked with the profit(sum) in the values field and category in the categories field. We also added two filters to only showcase the three categories (critical care, surgical and medical) as well as making the profit sum only on the years 2017 and 2018.
 <br><br>
 ![image](img-Quicksight/QS8.png)
 <br><br>
+
 ### Total increase in cost in 2018
-<br><br>
+<br>
 For this one, we created a new period over period insight with admition date(year) in the time field and the cost(sum) in the values field.
 <br><br>
 ![image](img-Quicksight/QS9.png)
