@@ -116,8 +116,8 @@ Question1: what actions are allowed for EC2 instances and S3 objects based on th
 ![image](img-policies/policy1.png)
 <br><br>
 EC2 instances
-*“ec2:RunInstances”: allows the user to launch new EC2 instances.
-*“ec2:TerminateInstances”: allows the user to terminate EC2 instances.
+* “ec2:RunInstances”: allows the user to launch new EC2 instances.
+* “ec2:TerminateInstances”: allows the user to terminate EC2 instances.
 *“arn:aws:ec2:us-east-1:123456789012:instance/*: allows all actions on all EC2 instances in the specified region (us-east-1) for the account ID 123456789012.
 
 S3 instances
