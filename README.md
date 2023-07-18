@@ -260,6 +260,7 @@ We also added a conditional formating on the discount(sum) value so that when it
 <br><br>
 
 ![image](img-Quicksight/QS7.png)
+![image](img-Quicksight/QS71.png)
 <br><br>
 
 ### Top 3 categories for total profit
