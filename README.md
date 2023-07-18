@@ -191,3 +191,7 @@ You would be able to terminate an instance as you would have all actions allowed
 <div id='dashboard'/>
   
 ## Quicksight dashboard
+
+First, here is an overview of our final dashboard:
+![image](img-Quicksight/QS1.png)
+
