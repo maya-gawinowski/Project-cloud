@@ -135,58 +135,58 @@ Question3: what actions are allowed on the “example-bucket” and its objects 
 <br><br>
 ![image](img-policies/policy3.png)
 <br><br>
-Actions allowed on “example-bucket”:
-•	“s3:GetObject”: allows the user to retrieve objects from the “example-bucket”.
-•	“s3:PutObject”: allows the user to upload objects into the “example-bucket”.
-•	“s3:ListBucket”: allows the user to list objects within the “example-bucket”.
+Actions allowed on “example-bucket”:<br>
+•	“s3:GetObject”: allows the user to retrieve objects from the “example-bucket”.<br>
+•	“s3:PutObject”: allows the user to upload objects into the “example-bucket”.<br>
+•	“s3:ListBucket”: allows the user to list objects within the “example-bucket”.<br>
 
-Specified prefixes in the condition:
-•	“documents/*”: allows access to objects in the “bucket-example” that have the “document” prefix.
-•	“images/*”: allows access to objects in the bucket-example” that have the “images” prefix.
+Specified prefixes in the condition:<br>
+•	“documents/*”: allows access to objects in the “bucket-example” that have the “document” prefix.<br>
+•	“images/*”: allows access to objects in the bucket-example” that have the “images” prefix.<br>
 
 Question4: what actions are allowed for IAM users based on this policy? How are the resources ARNs constructed?
 <br><br>
 ![image](img-policies/policy4.png)
 <br><br>
-Allowed actions:
-•	“iam:CreateUser”: allows the user to create IAM users.
-•	“iam:DeleteUser”: allows the user to delete IAM users.
+Allowed actions:<br>
+•	“iam:CreateUser”: allows the user to create IAM users.<br>
+•	“iam:DeleteUser”: allows the user to delete IAM users.<br>
 
-Resource ARNs:
-•	Follows the following template “arn:aws:iam::123456789012:user/${aws:username}”
-•	“${aws:username} is dynamically replaced by the username of the user currently connected. Ensures the users will only perform their allowed actions on their own IAM user resource.
+Resource ARNs:<br>
+•	Follows the following template “arn:aws:iam::123456789012:user/${aws:username}”<br>
+•	“${aws:username} is dynamically replaced by the username of the user currently connected. Ensures the users will only perform their allowed actions on their own IAM user resource.<br>
 
-Question5: 
-•	Which AWS service does this policy grant you access to?
-•	Does it allow you to create an IAM user, group, policy, or role?
+Question5: <br>
+•	Which AWS service does this policy grant you access to?<br>
+•	Does it allow you to create an IAM user, group, policy, or role?<br>
 •	Go to https://docs.aws.amazon.com/IAM/latest/UserGuide/ and in the left navigation expand Reference > Policy Reference > Actions, Resources, and Condition Keys. Choose Identity And Access Management. Scroll to the Actions Defined by Identity And Access Management list.��Name at least three specific actions that the iam:Get* action allows.
 <br><br>
 ![image](img-policies/policy5.png)
 <br><br>
-•	This policy grant access to all actions that start with Get “iam:Get*” and all actions that start with List “iam:List*”.
-•	It does not allow to create anything. For that we would need to add “iam:Create*” to the actions allowed.
-•	“iam:Get*” allows
-o	“Iam:GetGroup”: allows to retrieve a list of IAM users that are in the specified IAM group.
-o	“iam:GetRole”: allows to retrieve information about the specified role (role’s path, GUID, ARN, role’s trust policy).
-o	“iam:GetUser”: allows to retrieve information about the specified IAM user (user’s creation date, path, unique ID and ARN). 
+•	This policy grant access to all actions that start with Get “iam:Get*” and all actions that start with List “iam:List*”.<br>
+•	It does not allow to create anything. For that we would need to add “iam:Create*” to the actions allowed.<br>
+•	“iam:Get*” allows<br>
+o	“Iam:GetGroup”: allows to retrieve a list of IAM users that are in the specified IAM group.<br>
+o	“iam:GetRole”: allows to retrieve information about the specified role (role’s path, GUID, ARN, role’s trust policy).<br>
+o	“iam:GetUser”: allows to retrieve information about the specified IAM user (user’s creation date, path, unique ID and ARN). <br>
 
 Question6: 
 <br><br>
 ![image](img-policies/policy6.png)
 <br><br>
-•	What actions does the policy allow?
+•	What actions does the policy allow?<br>
 
-The actions “ec2:RunInstances” and “ec2:StartInstances” are denied to the user this policy is assigned to. However all actions not lister in the actions will be allowed to the user. 
+The actions “ec2:RunInstances” and “ec2:StartInstances” are denied to the user this policy is assigned to. However all actions not lister in the actions will be allowed to the user. <br>
 
 •	Say that the policy included an additional statement object, like this example:
 <br><br>
 ![image](img-policies/policy7.png)
 <br><br>
-•	How would the policy restrict the access granted to you by this additional statement?
-•	If the policy included both the statement on the left and the statement in question 2, could you terminate an m3.xlarge instance that existed in the account?
+•	How would the policy restrict the access granted to you by this additional statement?<br>
+•	If the policy included both the statement on the left and the statement in question 2, could you terminate an m3.xlarge instance that existed in the account?<br>
 
-The “allow” statement takes precedence over the “deny” effect. Therefore, the user will have access to all actions on ec2 instances and the actions defined before will not be taken into account.
-You would be able to terminate an instance as you would have all actions allowed on ec2 instances.
+The “allow” statement takes precedence over the “deny” effect. Therefore, the user will have access to all actions on ec2 instances and the actions defined before will not be taken into account.<br>
+You would be able to terminate an instance as you would have all actions allowed on ec2 instances.<br>
 
 <div id='dashboard'/>
   
