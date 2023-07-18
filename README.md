@@ -116,74 +116,74 @@ Question1: what actions are allowed for EC2 instances and S3 objects based on th
 ![image](img-policies/policy1.png)
 <br><br>
 EC2 instances
-•	“ec2:RunInstances”: allows the user to launch new EC2 instances.<br><br>
-•	“ec2:TerminateInstances”: allows the user to terminate EC2 instances.
-•	“arn:aws:ec2:us-east-1:123456789012:instance/*: allows all actions on all EC2 instances in the specified region (us-east-1) for the account ID 123456789012.
+*“ec2:RunInstances”: allows the user to launch new EC2 instances.
+*“ec2:TerminateInstances”: allows the user to terminate EC2 instances.
+*“arn:aws:ec2:us-east-1:123456789012:instance/*: allows all actions on all EC2 instances in the specified region (us-east-1) for the account ID 123456789012.
 
 S3 instances
-•	“s3:GetObject”: allows the user to retrieve S3 objects
-•	“s3:PutObject”: allows the user to upload S3 objects
-•	“arn:aws:s3:::example-bucket/*”: allows actions on all objects within the example-bucket S3 bucket. 
+*“s3:GetObject”: allows the user to retrieve S3 objects
+*“s3:PutObject”: allows the user to upload S3 objects
+*“arn:aws:s3:::example-bucket/*”: allows actions on all objects within the example-bucket S3 bucket. 
 
 Question2: under what condition does this policy allows access to VPC-related information? Which AWS region?
 <br><br>
 ![image](img-policies/policy2.png)
 <br><br>
-•	“aws:RequestRegion”: “us-west-2” : allows access to VPC-related information only if the requested AWS region is set to “us-west-2”.
+*“aws:RequestRegion”: “us-west-2” : allows access to VPC-related information only if the requested AWS region is set to “us-west-2”.
 
 Question3: what actions are allowed on the “example-bucket” and its objects based on this policy? What specific prefixes are specified in the condition?
 <br><br>
 ![image](img-policies/policy3.png)
 <br><br>
 Actions allowed on “example-bucket”:<br>
-•	“s3:GetObject”: allows the user to retrieve objects from the “example-bucket”.<br>
-•	“s3:PutObject”: allows the user to upload objects into the “example-bucket”.<br>
-•	“s3:ListBucket”: allows the user to list objects within the “example-bucket”.<br>
+*“s3:GetObject”: allows the user to retrieve objects from the “example-bucket”.<br>
+*“s3:PutObject”: allows the user to upload objects into the “example-bucket”.<br>
+*“s3:ListBucket”: allows the user to list objects within the “example-bucket”.<br>
 
 Specified prefixes in the condition:<br>
-•	“documents/*”: allows access to objects in the “bucket-example” that have the “document” prefix.<br>
-•	“images/*”: allows access to objects in the bucket-example” that have the “images” prefix.<br>
+*“documents/*”: allows access to objects in the “bucket-example” that have the “document” prefix.<br>
+*“images/*”: allows access to objects in the bucket-example” that have the “images” prefix.<br>
 
 Question4: what actions are allowed for IAM users based on this policy? How are the resources ARNs constructed?
 <br><br>
 ![image](img-policies/policy4.png)
 <br><br>
 Allowed actions:<br>
-•	“iam:CreateUser”: allows the user to create IAM users.<br>
-•	“iam:DeleteUser”: allows the user to delete IAM users.<br>
+*“iam:CreateUser”: allows the user to create IAM users.<br>
+*“iam:DeleteUser”: allows the user to delete IAM users.<br>
 
 Resource ARNs:<br>
-•	Follows the following template “arn:aws:iam::123456789012:user/${aws:username}”<br>
-•	“${aws:username} is dynamically replaced by the username of the user currently connected. Ensures the users will only perform their allowed actions on their own IAM user resource.<br>
+*Follows the following template “arn:aws:iam::123456789012:user/${aws:username}”<br>
+*“${aws:username} is dynamically replaced by the username of the user currently connected. Ensures the users will only perform their allowed actions on their own IAM user resource.<br>
 
 Question5: <br>
-•	Which AWS service does this policy grant you access to?<br>
-•	Does it allow you to create an IAM user, group, policy, or role?<br>
-•	Go to https://docs.aws.amazon.com/IAM/latest/UserGuide/ and in the left navigation expand Reference > Policy Reference > Actions, Resources, and Condition Keys. Choose Identity And Access Management. Scroll to the Actions Defined by Identity And Access Management list.��Name at least three specific actions that the iam:Get* action allows.
+*Which AWS service does this policy grant you access to?<br>
+*Does it allow you to create an IAM user, group, policy, or role?<br>
+*Go to https://docs.aws.amazon.com/IAM/latest/UserGuide/ and in the left navigation expand Reference > Policy Reference > Actions, Resources, and Condition Keys. Choose Identity And Access Management. Scroll to the Actions Defined by Identity And Access Management list.��Name at least three specific actions that the iam:Get* action allows.
 <br><br>
 ![image](img-policies/policy5.png)
 <br><br>
-•	This policy grant access to all actions that start with Get “iam:Get*” and all actions that start with List “iam:List*”.<br>
-•	It does not allow to create anything. For that we would need to add “iam:Create*” to the actions allowed.<br>
-•	“iam:Get*” allows<br>
-o	“Iam:GetGroup”: allows to retrieve a list of IAM users that are in the specified IAM group.<br>
-o	“iam:GetRole”: allows to retrieve information about the specified role (role’s path, GUID, ARN, role’s trust policy).<br>
-o	“iam:GetUser”: allows to retrieve information about the specified IAM user (user’s creation date, path, unique ID and ARN). <br>
+*This policy grant access to all actions that start with Get “iam:Get*” and all actions that start with List “iam:List*”.<br>
+*It does not allow to create anything. For that we would need to add “iam:Create*” to the actions allowed.<br>
+“iam:Get*” allows<br>
+*“Iam:GetGroup”: allows to retrieve a list of IAM users that are in the specified IAM group.<br>
+*“iam:GetRole”: allows to retrieve information about the specified role (role’s path, GUID, ARN, role’s trust policy).<br>
+*“iam:GetUser”: allows to retrieve information about the specified IAM user (user’s creation date, path, unique ID and ARN). <br>
 
 Question6: 
 <br><br>
 ![image](img-policies/policy6.png)
 <br><br>
-•	What actions does the policy allow?<br>
+*What actions does the policy allow?<br>
 
 The actions “ec2:RunInstances” and “ec2:StartInstances” are denied to the user this policy is assigned to. However all actions not lister in the actions will be allowed to the user. <br>
 
-•	Say that the policy included an additional statement object, like this example:
+*Say that the policy included an additional statement object, like this example:
 <br><br>
 ![image](img-policies/policy7.png)
 <br><br>
-•	How would the policy restrict the access granted to you by this additional statement?<br>
-•	If the policy included both the statement on the left and the statement in question 2, could you terminate an m3.xlarge instance that existed in the account?<br>
+*How would the policy restrict the access granted to you by this additional statement?<br>
+*If the policy included both the statement on the left and the statement in question 2, could you terminate an m3.xlarge instance that existed in the account?<br>
 
 The “allow” statement takes precedence over the “deny” effect. Therefore, the user will have access to all actions on ec2 instances and the actions defined before will not be taken into account.<br>
 You would be able to terminate an instance as you would have all actions allowed on ec2 instances.<br>
