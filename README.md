@@ -111,7 +111,7 @@ IAM:
   
 ## IAM policies
 
-Question1: what actions are allowed for EC2 instances and S3 objects based on this policy? What specific resources are included?
+#### Question1: what actions are allowed for EC2 instances and S3 objects based on this policy? What specific resources are included?
 <br><br>
 ![image](img-policies/policy1.png)
 <br><br>
@@ -125,13 +125,13 @@ S3 instances
 * “s3:PutObject”: allows the user to upload S3 objects
 * “arn:aws:s3:::example-bucket/*”: allows actions on all objects within the example-bucket S3 bucket. 
 
-Question2: under what condition does this policy allows access to VPC-related information? Which AWS region?
+#### Question2: under what condition does this policy allows access to VPC-related information? Which AWS region?
 <br><br>
 ![image](img-policies/policy2.png)
 <br><br>
 * “aws:RequestRegion”: “us-west-2” : allows access to VPC-related information only if the requested AWS region is set to “us-west-2”.
 
-Question3: what actions are allowed on the “example-bucket” and its objects based on this policy? What specific prefixes are specified in the condition?
+#### Question3: what actions are allowed on the “example-bucket” and its objects based on this policy? What specific prefixes are specified in the condition?
 <br><br>
 ![image](img-policies/policy3.png)
 <br><br>
@@ -144,7 +144,7 @@ Specified prefixes in the condition:<br>
 * “documents/*”: allows access to objects in the “bucket-example” that have the “document” prefix.<br>
 * “images/*”: allows access to objects in the bucket-example” that have the “images” prefix.<br>
 
-Question4: what actions are allowed for IAM users based on this policy? How are the resources ARNs constructed?
+#### Question4: what actions are allowed for IAM users based on this policy? How are the resources ARNs constructed?
 <br><br>
 ![image](img-policies/policy4.png)
 <br><br>
@@ -156,7 +156,7 @@ Resource ARNs:<br>
 * Follows the following template “arn:aws:iam::123456789012:user/${aws:username}”<br>
 * “${aws:username} is dynamically replaced by the username of the user currently connected. Ensures the users will only perform their allowed actions on their own IAM user resource.<br>
 
-Question5: <br>
+#### Question5: <br>
 * Which AWS service does this policy grant you access to?<br>
 * Does it allow you to create an IAM user, group, policy, or role?<br>
 * Go to https://docs.aws.amazon.com/IAM/latest/UserGuide/ and in the left navigation expand Reference > Policy Reference > Actions, Resources, and Condition Keys. Choose Identity And Access Management. Scroll to the Actions Defined by Identity And Access Management list.��Name at least three specific actions that the iam:Get* action allows.
@@ -170,7 +170,7 @@ Question5: <br>
 * “iam:GetRole”: allows to retrieve information about the specified role (role’s path, GUID, ARN, role’s trust policy).<br>
 *“iam:GetUser”: allows to retrieve information about the specified IAM user (user’s creation date, path, unique ID and ARN). <br>
 
-Question6: 
+#### Question6: 
 <br><br>
 ![image](img-policies/policy6.png)
 <br><br>
