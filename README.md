@@ -1,5 +1,7 @@
 # Project-cloud
 
+Group: Maya Gawinowski & Nicolas Chalant
+
 ---
 
 Table of Contents
